@@ -12,7 +12,7 @@ export default async function handler(
   try {
     let handle = req.query?.handle || '';
     handle = Array.isArray(handle) ? handle[0] : handle;
-    //await ig.simulate.preLoginFlow();
+    await ig.simulate.preLoginFlow();
     const auth = await ig.account.login(
       process.env.IG_USERNAME || '',
       process.env.IG_PASSWORD || ''
